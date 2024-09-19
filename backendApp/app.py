@@ -13,24 +13,6 @@ load_dotenv(dotenv_path='/Users/miguelrestrepo/Desktop/appContainer/OasisApp/.en
 import os
 
 
-
-
-# Initialize Firebase
-# cred = credentials.Certificate('/Users/miguelrestrepo/Desktop/oasisauth-bdf1b-a87fd6f5d44e.json')
-# firebase_admin.initialize_app(cred,{
-#     "storageBucket": "oasisauth-bdf1b.appspot.com",
-
-# })
-
-# # Initialize Pyrebase
-# firebase_config = {
-#     "apiKey": "AIzaSyD3Whh8doflZ3D56eOdYHEie-LnYxDHJ-E",
-#     "authDomain": "oasisauth-bdf1b.firebaseapp.com",
-#     "databaseURL": "https://oasisauth-bdf1b.firebaseio.com",
-#     "storageBucket": "oasisauth-bdf1b.appspot.com",
-#     "messagingSenderId": "699881512772",
-#     "appId": "1:699881512772:ios:951593c5015f823952c111"
-# }
 cred = credentials.Certificate(os.getenv('GOOGLE_APPLICATION_CREDENTIALS'))
 firebase_admin.initialize_app(cred,{
     "storageBucket": os.getenv('STORAGE_BUCKET'),
